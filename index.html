@@ -10,5 +10,12 @@
     <meta name="theme-color" content="#7c3aed" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   </head>
-  <body><div id="root"></div><script type="module" src="/src/main.tsx"></script></body>
+  <body><div id="root"></div><script type="module" src="/src/main.tsx"></script>  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/securenotes-pro/sw.js', { scope: '/securenotes-pro/' });
+      });
+    }
+  </script>
+</body>
 </html>
